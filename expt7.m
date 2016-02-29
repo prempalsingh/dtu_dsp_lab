@@ -1,0 +1,16 @@
+b=input('Enter the coefficients of x: ');
+a=input('Enter the coefficients of y: ');
+n=[-5:50];
+x=[(n>=0)]-[(n>4)];
+figure(1);
+subplot(2,1,1);
+stem(n,x);
+title('input sequence x(n)');
+xlabel('n');
+ylabel('x');
+subplot(2,1,2);
+y=filter(b,a,x);
+stem(n,y);
+title('output sequence y(n)');
+xlabel('n');
+ylabel('y');
